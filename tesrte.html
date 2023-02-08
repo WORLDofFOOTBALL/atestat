@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.div0{
+    background-color: #25252a;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    overflow-y: overlay;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #999;
+    border-radius: 100px;
+}
+.topHeadlines1 .right .topNews::-webkit-scrollbar{
+    width: 6px;
+}
+.topHeadlines1 .right .topNews::-webkit-scrollbar-thumb{
+    background-color: #777;
+}
+
+
+.header1{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: #0b0b11;
+    transition: 0.3s;
+}
+.header1.sticky1{
+    padding-block: 10px;
+    box-shadow: inset 0 -1.5px 3px rgba(255,255,255,0.3);
+}
+.logo1{
+    font-size: 45px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.header1 nav ul{
+    display: flex;
+}
+.header1 nav div.bar{
+    display: none;
+    position: absolute;
+    right: 80px;
+    margin-top: -10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.header1 nav div.bar.active1 .open1{
+    display: none;
+}
+.header1 nav div.bar .close1{
+    display: none;
+}
+.header1 nav div.bar.active1 .close1{
+    display: initial;
+}
+
+.header nav ul li{
+    list-style: none;
+    margin: 0 15px;
+    padding: 0 10px;
+    border-left: 1px solid #fff0;
+    border-right: 1px solid #fff0;
+    transition: 0.3s;
+}
+.header nav ul li:hover{
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.topHeadlines1{
+    padding: 100px 50px 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+.topHeadlines1 .left{
+    padding: 10px 30px;
+}
+.topHeadlines1 .left > .title1{
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.topHeadlines1 .left .img{
+    width: 100%;
+    height: 400px;
+    background-color: #a04;
+}
+.topHeadlines1 .left .img img{
+    width: 100%;
+    height: 100%;
+}
+.topHeadlines1 .left .text1{
+    padding: 20px 15px 10px;
+}
+.topHeadlines1 .left .text1 .title1 a{
+    text-decoration: none;
+}
+.topHeadlines1 .left .text1 .title1 a h2{
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    display: inline;
+    cursor: pointer;
+}
+.topHeadlines1 .left .text1 .title1 a h2:hover{
+    text-decoration: underline;
+}
+.topHeadlines1 .left .text1 .description{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+.topHeadlines1 .right{
+    padding: 10px;
+    width: 1005;
+    height: 500px;
+}
+.topHeadlines1 .right > .title1{
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.topHeadlines1 .right .topNews{
+    padding: 7px;
+    height: 85%;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    overflow-y: scroll;
+}
+.topHeadlines1 .right .topNews .news{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.topHeadlines1 .right .topNews .news .img{
+    width: 170px;
+    height: 100%;
+    max-height: 120px;
+    min-height: 90px;
+    background-color: #a04;
+}
+.topHeadlines1 .right .topNews .news .img img{
+    width: 100%;
+    height: 100%;
+}
+.topHeadlines1 .right .topNews .news .text1{
+    margin-inline: 10px;
+    display: flex;
+    align-items: center;
+}
+.topHeadlines1 .right .topNews .news .text1 .title1 a{
+    text-decoration: none;
+}
+.topHeadlines1 .right .topNews .news .text1 .title1 a p{
+    color: #fff;
+    display: inline;
+}
+.topHeadlines1 .right .topNews .news .text1 .title1 a p:hover{
+    text-decoration: underline;
+}
+.page2{
+    width: 100%;
+    background-color: #16161d;
+    min-height: 100vh;
+    padding: 50px;
+}
+.page2 .news{
+    padding: 30px 0;
+    border-bottom: 1px solid #555;
+}
+.page2 .news:last-child{
+    padding: 30px 0;
+    border-bottom: none;
+}
+.page2 .news > .title1 h2{
+    font-size: 40px;
+    cursor: pointer;
+    display: inline;
+}
+.page2 .news > .title1 h2:hover{
+    text-decoration: underline;
+}
+.page2 .news .newsBox{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page2 .news .newsBox .newsCard{
+    width: calc(100% / 5 - 20px); /*20px is the margin given to each card*/
+    margin: 10px;
+}
+.page2 .news .newsBox .newsCard .img{
+    width: 100%;
+    height: 150px;
+    background-color: #a04;
+    border-radius: 5px;
+}
+.page2 .news .newsBox .newsCard .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.page2 .news .newsBox .newsCard .text1{
+    padding: 10px;
+}
+.page2 .news .newsBox .newsCard .text1 .title1 a{
+    text-decoration: none;
+}
+.page2 .news .newsBox .newsCard .text1 .title1 a p{
+    font-size: 15px;
+    color: #fff;
+    display: inline;
+    cursor: pointer;
+}
+.page2 .news .newsBox .newsCard .title1 a p:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width:1024px) {
+    .topHeadlines1 .right .topNews .news .img {
+        width: 150px;
+    }
+    .topHeadlines1 .right .topNews .news .text1 .title1 a p {
+        font-size: 14px;
+    }
+    .page2 .news .newsBox .newsCard .img {
+        height: 120px;
+    }
+    .page2 .news .newsBox .newsCard .text1 {
+        padding: 5px;
+    }
+    .page2 .news .newsBox .newsCard .text1 .title1 a p {
+        font-size: 14px;
+    }
+}
+@media (max-width:768px) {
+    .header1 nav div.bar{
+        display: block;
+    }
+    .header1 nav ul {
+        opacity: 0;
+        position: absolute;
+        background-color: #0b0b11;
+        flex-direction: column;
+        right: 0px;
+        padding: 30px 30px 10px;
+        text-align: center;
+        pointer-events: none;
+        border-radius: 10px;
+    }
+    .header1 nav ul.activeMenu {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .header1 nav ul li{
+        margin: 10px 0;
+    }
+    .topHeadlines1 {
+        display: block;
+    }
+    .topHeadlines1 .right .topNews .news .img {
+        width: 220px;
+    }
+    .topHeadlines1 .right .topNews .news .text1 .title1 a p {
+        font-size: 18px;
+    }
+    .page2 .news .newsBox .newsCard {
+        width: calc(100% / 3 - 20px);
+    }
+   
+}
+@media (max-width:600px) {
+    .logo1 {
+        font-size: 35px;
+    }
+    .topHeadlines1 .left {
+        padding: 10px 0px;
+    }
+    .topHeadlines1 .right .topNews .news .img {
+        width: 150px;
+    }
+    .topHeadlines1 .right .topNews .news .text1 .title1 a p {
+        font-size: 14px;
+    }
+    .page2 .news .newsBox .newsCard {
+        width: calc(100% / 2 - 20px);
+    }
+    
+}
+@media (max-width:425px) {
+    .header1 nav div.bar {
+        right: 50px;
+    }
+    .header1 nav ul {
+        padding: 30px 10px 10px;
+    }
+    .header1 nav ul li {
+        margin: 5px 0px;
+    }
+    .header1 nav ul li a {
+        font-size: 14px;
+    }
+    .topHeadlines1 {
+        padding: 100px 20px 50px;
+    }
+    .page2 {
+        padding: 50px 20px;
+    }
+    .page2 .news .newsBox .newsCard {
+        width: 100%;
+        display: grid;
+    }
+    .page2 .news > .title h2 {
+        font-size: 30px;
+    }
+    .page2 .news .newsBox .newsCard .img{
+        height: 100%;
+        min-height: 150px;
+    }
+    .page2 .news .newsBox .newsCard .text1 .title1 a p {
+        font-size: 16px;
+    }
+}
+    </style>
+    <title>News Website</title>
+</head>
+<body>
+    <div class="div0">
+        <div class="header1">
+        <div class="logo1">
+            NEWS
+        </div>
+            <div class="bar">
+               
+            </div>
+         </div>
+        <div class="topHeadlines1">
+        <div class="left">
+            <div class="title1">
+                <h2>Breaking News</h2>
+            </div>
+            <div class="img" id="breakingImg">
+                
+            </div>
+            <div class="text1" id="breakingNews">
+                <div class="title1">
+                    
+                </div>
+                <div class="description">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title1">
+                <h2>Top Headlines</h2>
+            </div>
+            <div class="topNews">
+    
+            </div>
+
+        </div>
+        </div>
+        <div class="page2">
+        <div class="news" id="sportsNews">
+            <div class="title1">
+                <h2>Sports News</h2>
+            </div>
+            <div class="newsBox">
+            </div>
+        </div>
+        <div class="news" id="businessNews">
+            <div class="title1">
+                <h2>Business News</h2>
+            </div>
+            <div class="newsBox">
+            </div>
+        </div>
+        <div class="news" id="techNews">
+            <div class="title1">
+                <h2>Technology News</h2>
+            </div>
+            <div class="newsBox">
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        let breakingImg = document.querySelector('#breakingImg')
+let breakingNews_title = document.querySelector('#breakingNews .title1')
+let breakingNews_desc = document.querySelector('#breakingNews .description')
+let topNews = document.querySelector('.topNews')
+let sportsNews = document.querySelector('#sportsNews .newsBox')
+let businessNews = document.querySelector('#businessNews .newsBox')
+let techNews = document.querySelector('#techNews .newsBox')
+
+let header = document.querySelector('.header1')
+let toggleMenu = document.querySelector('.bar')
+let menu = document.querySelector('nav ul')
+
+const toggle = (e)=>{
+    toggleMenu.classList.toggle('active')
+    menu.classList.toggle('activeMenu')
+}
+
+toggleMenu.addEventListener('click',toggle)
+
+
+
+window.addEventListener('scroll',()=>{
+    if(window.scrollY>50){
+        header.classList.add('sticky')
+    }
+    else{
+        header.classList.remove('sticky')
+    }
+})
+
+
+
+
+
+
+
+// fetching news data from a website providing api
+
+const apiKey = "29f8e42efe874ee2be23f0d1edb6844b"
+
+const fetchData = async (category,pageSize)=>{
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=${pageSize}&apiKey=${apiKey}`
+    const data = await fetch(url)
+    const response = await data.json()
+    console.log(response);
+    return response.articles
+    
+}
+// fetchData('general',5)
+
+//adding breaking news
+
+const add_breakingNews = (data)=>{
+    breakingImg.innerHTML = `<img src=${data[0].urlToImage} alt="image">`
+    breakingNews_title.innerHTML = `<a href=${data[0].url} target="_blank"><h2>${data[0].title}</h2></a>`
+    breakingNews_desc.innerHTML = `${data[0].description}`
+}
+fetchData('general',5).then(add_breakingNews)
+
+const add_topNews = (data)=>{
+    let html = ''
+    let title = ''
+    data.forEach((element)=>{
+        if (element.title.length<100){
+            title = element.title
+        }
+        else{
+            title = element.title.slice(0,100) + "..."
+        }
+
+        html += `<div class="news">
+                    <div class="img">
+                        <img src=${element.urlToImage} alt="image">
+                    </div>
+                    <div class="text1">
+                        <div class="title1">
+                        <a href=${element.url} target="_blank"><p>${title}</p></a>
+                        </div>
+                    </div>
+                </div>`
+    })
+    topNews.innerHTML = html
+}
+fetchData('general',20).then(add_topNews)
+
+const add_sportsNews = (data)=>{
+    let html = ''
+    let title = ''
+    data.forEach((element)=>{
+        if (element.title.length<100){
+            title = element.title
+        }
+        else{
+            title = element.title.slice(0,100) + "..."
+        }
+
+        html += `<div class="newsCard">
+                    <div class="img">
+                        <img src=${element.urlToImage} alt="image">
+                    </div>
+                    <div class="text1">
+                        <div class="title1">
+                        <a href=${element.url} target="_blank"><p>${title}</p></a>
+                        </div>
+                    </div>
+                </div>`
+    })
+    sportsNews.innerHTML = html
+}
+fetchData('sports',5).then(add_sportsNews)
+const add_businessNews = (data)=>{
+    let html = ''
+    let title = ''
+    data.forEach((element)=>{
+        if (element.title.length<100){
+            title = element.title
+        }
+        else{
+            title = element.title.slice(0,100) + "..."
+        }
+
+        html += `<div class="newsCard">
+                    <div class="img">
+                        <img src=${element.urlToImage} alt="image">
+                    </div>
+                    <div class="text1">
+                        <div class="title1">
+                        <a href=${element.url} target="_blank"><p>${title}</p></a>
+                        </div>
+                    </div>
+                </div>`
+    })
+    businessNews.innerHTML = html
+}
+fetchData('business',5).then(add_businessNews)
+const add_techNews = (data)=>{
+    let html = ''
+    let title = ''
+    data.forEach((element)=>{
+        if (element.title.length<100){
+            title = element.title
+        }
+        else{
+            title = element.title.slice(0,100) + "..."
+        }
+
+        html += `<div class="newsCard">
+                    <div class="img">
+                        <img src=${element.urlToImage} alt="image">
+                    </div>
+                    <div class="text1">
+                        <div class="title1">
+                        <a href=${element.url} target="_blank"><p>${title}</p></a>
+                        </div>
+                    </div>
+                </div>`
+    })
+    techNews.innerHTML = html
+}
+fetchData('technology',5).then(add_techNews)
+    </script>
+</body>
+</html>
